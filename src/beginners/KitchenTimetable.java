@@ -9,8 +9,16 @@ public class KitchenTimetable {
 
         while (testCases > 0) {
             int students = sc.nextInt();
-            int[] moments = {sc.nextInt(), sc.nextInt(), sc.nextInt()};
-            int[] timeRequired = {sc.nextInt(), sc.nextInt(), sc.nextInt()};
+            int[] moments = new int[students];
+            for (int i = 0; i < moments.length; i++) {
+                moments[i] = sc.nextInt();
+            }
+
+            int[] timeRequired = new int[students];
+            for (int i = 0; i < timeRequired.length; i++) {
+                timeRequired[i] = sc.nextInt();
+            }
+            
             System.out.println(kitchenTimetable(moments, timeRequired));
             testCases--;
         }
